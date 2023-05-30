@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-    Seller Interface
-  </title>
-  <link rel="icon" href="../static/img/logo.png" th:src="@{/img/logo.png}">
-  <link rel="stylesheet" href="../static/main.css" type="text/css" th:href="@{/main.css}">
-  <link rel="stylesheet" type="text/css" href="../static/profile.css" th:href="@{/main.css}">
+  <title>Seller Page</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
     <header>
-        <a th:href="@{/}" href="/Touchit/templates/main.html?_ijt=8nv4k5sgt2rormobgmivm23if0&_ij_reload=RELOAD_ON_SAVE" class="logo">
-            <img th:src="@{/img/logo.png}" src="../static/img/logo.png" alt="Company Logo">
+        <a href="index.html?_ijt=8nv4k5sgt2rormobgmivm23if0&_ij_reload=RELOAD_ON_SAVE" class="logo">
+            <img src="img/logo.png" alt="Company Logo">
         </a>
         <script>
             // Retrieve the preferred mode from local storage and apply it on page load
@@ -25,7 +23,7 @@
             }
             });
         </script>
-        <script src="../static/darkmode.js" defer></script>
+        <script src="js/darkmode.js" defer></script>
     </header>
     
     <div style="margin: 25px">
@@ -33,11 +31,13 @@
             Manage Products
         </h1>
         <hr />
-        <button>
-            Add new Product
-        </button>
+        <a href="editProduct.html?_ijt=4ugeebq784iuj0khd35jk1s02t&_ij_reload=RELOAD_ON_SAVE">
+            <button>
+                Add new Product
+            </button>
+        </a>
         <h2>
-            All Products
+            My Products
         </h2>
         <hr />
         <div>
@@ -52,6 +52,6 @@
             <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
             <label for="darkModeToggle" class="toggle-label"></label>
         </div>
-    </footer>
+    </footer>       
 </body>
 </html>

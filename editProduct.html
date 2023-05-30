@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-    Add Product
-  </title>
-  <link rel="icon" href="../static/img/logo.png" th:src="@{/img/logo.png}">
-  <link rel="stylesheet" href="../static/main.css" type="text/css" th:href="@{/main.css}">
-  <link rel="stylesheet" type="text/css" href="../static/profile.css" th:href="@{/main.css}">
+  <title>Edit Product</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/editProduct.css">
 </head>
 <body>
     <header>
-        <a th:href="@{/}" href="/Touchit/templates/main.html?_ijt=8nv4k5sgt2rormobgmivm23if0&_ij_reload=RELOAD_ON_SAVE" class="logo">
-            <img th:src="@{/img/logo.png}" src="../static/img/logo.png" alt="Company Logo">
+        <a href="index.html?_ijt=8nv4k5sgt2rormobgmivm23if0&_ij_reload=RELOAD_ON_SAVE" class="logo">
+            <img src="img/logo.png" alt="Company Logo">
         </a>
         <script>
             // Retrieve the preferred mode from local storage and apply it on page load
@@ -25,24 +23,36 @@
             }
             });
         </script>
-        <script src="../static/darkmode.js" defer></script>
+        <script src="js/darkmode.js" defer></script>
     </header>
+
+    <h1>
+        Edit Product
+    </h1>
+    <hr />
+    <form action="/add_product" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+        
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" min="0" required><br><br>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="0" required><br><br>
+        
+        <input type="submit" value="Add Product">
+    </form>
     
-    <div style="margin: 25px">
-        <h1>
-            Edit Product
-        </h1>
-        <hr />
-        <div>
-            <h2>
-                Name
-            </h2>
-        </div>
-    </div>
+
+
+
     
-
-
-
     <footer class="footer">
         <p>&copy; Touch Scanner!. All rights reserved.</p>
         <div class="dark-mode-toggle">
@@ -50,6 +60,6 @@
             <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
             <label for="darkModeToggle" class="toggle-label"></label>
         </div>
-    </footer>
+    </footer>       
 </body>
 </html>
