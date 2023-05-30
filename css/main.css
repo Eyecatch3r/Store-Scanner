@@ -147,6 +147,21 @@ body {
     position: relative;
 }
 
+Button {
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 18px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+Button:hover {
+    transform: scale(1.1);
+}
+
 .return-button {
     position: relative;
     top: -6px;
