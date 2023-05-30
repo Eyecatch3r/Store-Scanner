@@ -196,9 +196,8 @@ Button:hover {
     color: #050505;
     text-align: left;
     padding: 10px;
-    position: relative;
+    position: fixed;
     bottom: 0;
-    width: 100%;
 }
 
 
@@ -244,16 +243,6 @@ body.dark-mode,
     background-color: #222;
     color: #fff;
 }
-.footer {
-    background-color: #E8E8E8;
-    color: #050505;
-    text-align: left;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .dark-mode-toggle {
     display: flex;
     align-items: center;
