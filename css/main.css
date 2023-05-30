@@ -190,16 +190,63 @@ Button:hover {
 .return-button button:hover {
     transform: scale(1.1);
 }
-
 .footer {
     background-color: #DCDCDC;
     color: #050505;
     text-align: left;
     padding: 10px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-message {
+    margin-right: 10px;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #888;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #66bb6a;
+}
+
+.toggle-checkbox:checked + .toggle-label:before {
+    transform: translateX(-20px);
+}
+
+.dark-mode .toggle-label {
+    background-color: #222;
+}
+
+.dark-mode .toggle-label:before {
+    background-color: #888;
+}
+
+.dark-mode .toggle-label:before {
+    transform: translateX(20px);
+}
+
 
 .profile-picture {
     width: 60px;
@@ -244,7 +291,6 @@ body.dark-mode,
     color: #fff;
 }
 .dark-mode-toggle {
-    display: flex;
     align-items: center;
     position: relative; /* Add position relative to the toggle container */
 }
