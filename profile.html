@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+<body>
+<header>
+  <a href="index.html?_ijt=8nv4k5sgt2rormobgmivm23if0&_ij_reload=RELOAD_ON_SAVE" class="logo">
+    <img src="img/logo.png" alt="Company Logo">
+  </a>
+  <script>
+    // Retrieve the preferred mode from local storage and apply it on page load
+    window.addEventListener("DOMContentLoaded", function () {
+      const preferredMode = localStorage.getItem('mode');
+      const body = document.body;
+
+      if (preferredMode === 'dark') {
+        body.classList.add('dark-mode');
+        document.getElementById("darkModeToggle").checked = true;
+      }
+    });
+  </script>
+  <script src="js/darkmode.js" defer></script>
+</header>
+<div class="profile-container">
+      <img src="img/profile-picture.png" alt="Profile Picture" class="profile-picture">
+  <div class="profile-info">
+    <h2>User Profile</h2>
+    <p>Username: JohnDoe <button id="change-username-btn" class="profile-button">Change Username</button></p>
+    <p>Email: johndoe@example.com <button id="change-email-btn" class="profile-button">Change Email</button> </p>
+    <!-- Add more profile information here -->
+     <a href="index.html?_ijt=8nv4k5sgt2rormobgmivm23if0&_ij_reload=RELOAD_ON_SAVE"><button id="logout-btn" class="profile-button">Logout</button></a>
+  </div>
+</div>
+
+
+
+
+<footer class="footer">
+  <p>&copy; Touch Scanner!. All rights reserved.</p>
+  <div class="dark-mode-toggle">
+    <div class="toggle-message">Dark Mode</div>
+    <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
+    <label for="darkModeToggle" class="toggle-label"></label>
+  </div>
+</footer>
+</body>
+</html>

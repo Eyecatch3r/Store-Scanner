@@ -1,41 +1,81 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Touchit!</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script>
+        // Retrieve the preferred mode from local storage and apply it on page load
+        window.addEventListener("DOMContentLoaded", function () {
+            const preferredMode = localStorage.getItem('mode');
+            const body = document.body;
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+            if (preferredMode === 'dark') {
+                body.classList.add('dark-mode');
+                document.getElementById("darkModeToggle").checked = true;
+            }
+        });
+    </script>
+    <script src="js/main.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
 </head>
+<body onload="animateSearchResults()">
+<div class="header">
+    <a href="index.html?_ijt=4ugeebq784iuj0khd35jk1s02t&_ij_reload=RELOAD_ON_SAVE" class="logo">
+        <img  src="img/logo.png" alt="Company Logo">
+    </a>
+    <a href="profile.html?_ijt=4ugeebq784iuj0khd35jk1s02t&_ij_reload=RELOAD_ON_SAVE">
+        <img src="img/profile-picture.png" alt="Profile Picture" class="profile-picture">
+    </a>
+</div>
 
-<body>
+<label>
+    <div class="search-bar">
+            <input type="text" placeholder="Search Products">
+    </div>
+</label>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<div class="search-results">
+    <div id="return-button" class="return-button" onclick="returnToResults('result1')" style="display: none;">
+        <button class="return-button">Go Back</button>
+    </div>
+    <div class="result" id="result1" onclick="showDescription('result1')">
+        <img src="img/product1.jpg" alt="Product 1" class="result-image">
+        <h3>Search Result 1</h3>
+        <p>Description of the search result goes here.</p>
+        <p id="result1-description" class="description" style="display: none;">Description of the product goes here.</p>
+    </div>
+    <div class="result" id="result2" onclick="showDescription('result2')">
+        <img src="img/product2.jpg" alt="Product 2" class="result-image">
+        <h3>Search Result 2</h3>
+        <p>Description of the search result goes here.</p>
+        <p id="result2-description" class="description" style="display: none;">Description of the product goes here.</p>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+    </div>
+    <div class="result" id="result3" onclick="showDescription('result3')">
+        <img src="img/product3.jpg" alt="Product 3" class="result-image">
+        <h3>Search Result 3</h3>
+        <p>Description of the search result goes here.</p>
+        <p id="result3-description" class="description" style="display: none;">Description of the product goes here.</p>
+    </div>
+
+
+    <div id="no-results-message" class="no-results-message no-results-container">
+        <div class="no-results-container">
+            <p>No results found.</p>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <p>&copy; Touch Scanner. All rights reserved.</p>
+    <div class="dark-mode-toggle">
+        <div class="toggle-message">Dark Mode</div>
+        <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
+        <label for="darkModeToggle" class="toggle-label"></label>
+    </div>
+</footer>
+
 </body>
-
 </html>
