@@ -162,6 +162,11 @@ Button:hover {
     transform: scale(1.1);
 }
 
+.dark-mode Button {
+    background-color: #ffffff;
+    color: #222222;
+}
+
 .return-button {
     position: relative;
     top: -6px;
