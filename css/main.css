@@ -406,13 +406,21 @@ body.dark-mode,
 .dark-mode .search-bar input[type="text"],
 .dark-mode .search-bar button,
 .dark-mode .profile-container,
+.dark-mode form,
 .dark-mode .search-results .result,
 .dark-mode .no-results-message {
     background-color: #444;
 }
 
+.dark-mode input[type="number"],
+.dark-mode input[type="text"],
+.dark-mode textarea{
+    background-color: #444;
+}
+
 .dark-mode .header a,
 .dark-mode .footer p,
+.dark-mode label,
 .dark-mode .search-bar input[type="text"],
 .dark-mode .search-bar button,
 .dark-mode .search-results .result h3,
