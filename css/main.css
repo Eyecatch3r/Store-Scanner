@@ -196,10 +196,10 @@ Button:hover {
     color: #050505;
     text-align: left;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
-
 
 .profile-picture {
     width: 60px;
