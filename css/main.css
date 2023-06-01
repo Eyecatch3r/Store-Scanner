@@ -1,5 +1,20 @@
 /* CSS */
 
+
+@media (min-width: 768px) {
+    /* Styles for tablets and larger screens */
+    .result {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Styles for desktop screens */
+    .result {
+        width: calc(25% - 20px);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -93,6 +108,7 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 .result {
     background-color: #DCDCDC;
     padding: 20px;
@@ -102,14 +118,9 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33.33% - 20px);
+    width: calc(50% - 20px); /* Updated width for mobile */
     box-sizing: border-box;
-    animation: fadeIn 0.5s ease forwards; /* Add fade-in animation */
-}
-.result {
-    /* Rest of your styles */
-    opacity: 0; /* Set initial opacity to 0 */
-    transition: opacity 0.5s ease; /* Add transition for opacity */
+    animation: fade 0.5s ease forwards; /* Add fade-in animation */
 }
 
 .show {
